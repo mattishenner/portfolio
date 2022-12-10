@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATTIS HENNER - PORTFOLIO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/d5306e43e1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="menu-background">
+            <ul class="menu">
+                <li class="active-menu-item"><a href="#home">HOME</a></li>
+                <li><a href="pages/work.html">WORK</a></li>
+                <li><a href="pages/about.html">ABOUT</a></li>
+                <li><a href="pages/contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="front-main hidden2">
+        <section>
+            <h2 class="pre-title">HI. I'M MATTIS</h2>
+            <!-- Animated text -->
+            <div id="container">
+                <span id="text1"></span>
+                <span id="text2"></span>
+            </div>
+            <svg id="filters">
+                <defs>
+                    <filter id="threshold">
+                        <feColorMatrix in="SourceGraphic" type="matrix" values="5 0 0 0 0 0 10 0 0 0 0 0 1 0 0 0 0 0 255 -180" />
+                    </filter>
+                </defs>
+            </svg>
+            <a href="pages/work.html" class="button frontpage-button">VIEW MY WORK <i class="fa-solid fa-chevron-right"></i></a>
+        </section>
+    </main>
+
+    <script src="scripts/script.js "></script>
+</body>
+</html>
