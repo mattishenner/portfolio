@@ -13,7 +13,7 @@ nav{
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     max-width: 100vw;
 }
 
@@ -29,12 +29,13 @@ nav{
 
 .menu a{
     text-decoration: none;
-    color: rgb(148, 148, 148);
+    color: rgb(185, 185, 185);
     margin: auto var(--menu-item-space);
 }
 
 .active-menu-item a{
     color: white;
+    font-weight: 600;
 }
 
 .active-menu-item:after{
@@ -49,7 +50,7 @@ nav{
 
 .menu-background{
     width: 100%;
-    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0) 85%);
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
 }
 
 
@@ -111,6 +112,12 @@ img{
     max-inline-size: 100%;
     block-size: auto;
 }
+
+/* Sharpen SVG in animation */
+svg{
+    transform: unset !important; 
+} 
+
 
 
 /* FRONT PAGE */
@@ -225,10 +232,10 @@ img{
     background-image: url(../img/banner-ice-runner.jpg);
 }
 .b4{
-    background-image: url(../img/pro10.jpeg);
+    background-image: url(../img/banner-vjbyg.jpg);
 }
 .b5{
-    background-image: url(../img/pro11.jpeg);
+    background-image: url(../img/banner-me.jpg);
 }
 .b6{
     background-image: url(../img/pro12.jpeg);
@@ -350,8 +357,88 @@ footer{
 #ice-runner .content-header{
     background-image: url(../img/banner-ice-runner.jpg);
 }
+#ice-runner article{
+    margin: auto var(--margin);
+}
+
+.animation-wrapper{
+    display: flex;
+    justify-content: center;
+}
+#mammoth-animation-container{
+    width: clamp(100px, 50vw, 500px);
+}
+#caveman-animation-container{
+    transform: translateY(20px);
+    width: clamp(100px, 50vw, 500px);
+}
+
+.img-long{
+    height: 410px;
+    background-image: url('../img/ice-runner-long.jpg');
+}
+.img-gradient{
+    width: 70%;
+    height: 410px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.915), rgba(0, 0, 0, 0));
+    position: absolute;
+    left: 30%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.img-long-text{
+    text-align: right;
+    max-width: 400px;
+    margin-right: calc(var(--margin) + 30px)
+}
+.img-gallery{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-gallery img{
+    width: clamp(150px, 25vw, 400px);
+}
 
 
+/* VJ-byg redesign */
+#redesign .content-header{
+    background-image: url(../img/banner-vjbyg.jpg);
+}
+#redesign article{
+    margin: auto var(--margin);
+}
+
+#redesign .img-large{
+    max-width: 70%;
+    margin: 50px auto;
+}
+
+#redesign .img-medium{
+    max-width: 50%;
+    margin: 50px auto;
+}
+
+/* Animation - Me */
+#animation-me .content-header{
+    background-image: url(../img/banner-me.jpg);
+}
+
+#animation-me article{
+    margin: auto var(--margin);
+}
+
+#animation-me .animation-wrapper{
+    display: flex;
+    margin: 50px;
+}
+
+#me-animation-container{
+    background-color: rgb(216, 241, 227);
+    width: clamp(300px, 45vw, 800px);
+}
 
 
 
@@ -387,5 +474,19 @@ footer{
         flex-wrap: wrap;
         text-align: center;
         justify-content: center;
+    }
+
+    .img-gradient{
+        width: 100%;
+        left: 0%;
+    }
+
+    .img-gallery{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .img-gallery img{
+        width: clamp(100px, 80vw, 400px);
     }
 }

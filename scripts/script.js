@@ -1,11 +1,29 @@
 // Lottie animation
 var animation = bodymovin.loadAnimation({
-    container: document.getElementById('animation-container'),
-    path: '../../animations/frontpage-green.json',
+    container: document.getElementById('mammoth-animation-container'),
+    path: '../../animations/mammoth.json',
     render: 'SVG',
     loop: true,
     autoplay: true,
-    name: 'front-page-animation'
+    name: 'mammoth-animation'
+});
+
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('caveman-animation-container'),
+    path: '../../animations/caveman.json',
+    render: 'SVG',
+    loop: true,
+    autoplay: true,
+    name: 'caveman-animation'
+});
+
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('me-animation-container'),
+    path: '../../animations/me-green.json',
+    render: 'SVG',
+    loop: true,
+    autoplay: true,
+    name: 'me-animation'
 });
 
 
