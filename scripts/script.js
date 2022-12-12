@@ -1,3 +1,14 @@
+// Lottie animation
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animation-container'),
+    path: '../../animations/frontpage-green.json',
+    render: 'SVG',
+    loop: true,
+    autoplay: true,
+    name: 'front-page-animation'
+});
+
+
 //Animate on scroll
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

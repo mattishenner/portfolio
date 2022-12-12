@@ -216,13 +216,13 @@ img{
 }
 
 .b1{
-    background-image: url(../img/pro7.jpeg);
+    background-image: url(../img/banner-space.jpg);
 }
 .b2{
-    background-image: url(../img/pro8.jpeg);
+    background-image: url(../img/banner-animations.jpg);
 }
 .b3{
-    background-image: url(../img/pro9.jpeg);
+    background-image: url(../img/banner-ice-runner.jpg);
 }
 .b4{
     background-image: url(../img/pro10.jpeg);
@@ -291,6 +291,13 @@ footer{
 
 /* CONTENT PAGES */
 
+.content-page{
+    text-align: center;
+}
+.content-page main{
+    margin: auto var(--margin);
+}
+
 .content-wrapper{
     display: flex;
     align-items: center;
@@ -302,18 +309,50 @@ footer{
     width: clamp(300px,30vw,500px);
 }
 
-#ice-runner .content-header{
+
+.content-header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url(../img/pro3.png);
     background-position: center;
-    min-height: 300px;
+    height: 420px;
+    margin-bottom: 3rem;
 }
-
-#ice-runner .content-header p{
+.content-header p{
     margin: 0px;
 }
+.header-overlay{
+    width: 100%;
+    height: 420px;
+    position: absolute;
+    background-color: black;
+    opacity: 80%;
+}
+.header-text{
+    z-index: 1;
+}
+
+
+/* SPACE POSTER PAGE */
+#space-poster .content-header{
+    background-image: url('../img/banner-space.jpg');
+}
+#space-poster img{
+    width: 70%;
+}
+#space-poster main p{
+    margin-bottom: 3rem;
+
+}
+
+
+/* ICE RUNNER PAGE */
+#ice-runner .content-header{
+    background-image: url(../img/banner-ice-runner.jpg);
+}
+
+
+
 
 
 
