@@ -299,7 +299,10 @@ button{
 .contact-info{
     margin-top: 50px;
     opacity: 30%;
-    padding: 20px 0px;
+}
+
+.contact-info p{
+    margin: .25rem;
 }
 
 
