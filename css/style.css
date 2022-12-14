@@ -5,6 +5,7 @@
     --menu-item-space: clamp(10px, 3vw, 25px);
     --margin: clamp(10px, 3vw, 30px);
     --flex-gap: clamp(30px, 5vw, 60px);
+    --scroll-animation-size: 4vw;
 }
 
 
@@ -178,6 +179,8 @@ svg{
     top: calc(var(--menu-height) + 80px);
     z-index: -1;
 }
+
+
 
 .project-wrapper{
     background-color: rgb(255, 255, 255);
@@ -423,7 +426,7 @@ button{
 #redesign .content-header{
     background-image: url(../img/banner-vjbyg.jpg);
 }
-#redesign article{
+#redesign section{
     margin: auto var(--margin);
 }
 
@@ -433,8 +436,28 @@ button{
 }
 
 #redesign .img-medium{
+    display: block;
     max-width: 50%;
     margin: 50px auto;
+}
+
+.scroll-wrapper{
+    width: 100%;
+    height: calc(var(--scroll-animation-size) * 9 + 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px;
+    background-color: rgb(33, 33, 33);
+}
+
+.website-scroll{
+    width: calc(var(--scroll-animation-size) * 16);
+    height: calc(var(--scroll-animation-size) * 9);
+    background-image: url('../img/vjbyg-fullpage.png');
+    background-size: cover;
+    animation: website-scroll 25s linear infinite;
+    box-shadow: 0px 0px 50px rgb(0, 0, 0);
 }
 
 /* Animation - Me */
@@ -504,5 +527,26 @@ button{
     }
     .img-gallery img{
         width: clamp(100px, 80vw, 400px);
+    }
+}
+
+@keyframes website-scroll {
+    0%{
+        background-position: 0% 0%;
+    }
+
+    5%{
+        background-position: 0% 0%;
+    }
+
+    90%{
+        background-position: 0px 100%;
+    }
+    95%{
+        background-position: 0px 100%;
+    }
+
+    100%{
+        background-position: 0px 0%;
     }
 }
