@@ -6,6 +6,7 @@
     --margin: clamp(10px, 3vw, 30px);
     --flex-gap: clamp(30px, 5vw, 60px);
     --scroll-animation-size: 4vw;
+    --content-width: clamp(600px, 80vw, 1200px);
 }
 
 
@@ -247,6 +248,7 @@ svg{
 
 /* ABOUT PAGE */
 .about-main{
+    min-height: 70vh;
     display: flex;
     gap: var(--flex-gap);
     justify-content: center;
@@ -325,11 +327,6 @@ button{
     gap: 40px;
 }
 
-.animation-video{
-    width: clamp(300px,30vw,500px);
-}
-
-
 .content-header{
     display: flex;
     flex-direction: column;
@@ -372,6 +369,18 @@ button{
     background-image: url('../img/banner-animations.jpg');
 }
 
+.animation-video{
+    width: clamp(400px,30vw,500px);
+}
+
+.video-grid{
+    margin: var(--margin);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 50px;
+}
+
 /* ICE RUNNER PAGE */
 #ice-runner .content-header{
     background-image: url(../img/banner-ice-runner.jpg);
@@ -393,8 +402,10 @@ button{
 }
 
 .img-long{
+    width: 100vw;
     height: 410px;
     background-image: url('../img/ice-runner-long.jpg');
+    transform: translateX(calc(0px - var(--margin)));
 }
 .img-gradient{
     width: 70%;
@@ -407,9 +418,10 @@ button{
     align-items: center;
 }
 .img-long-text{
+    color: white;
     text-align: right;
     max-width: 400px;
-    margin-right: calc(var(--margin) + 30px)
+    margin-right: var(--margin)
 }
 .img-gallery{
     margin-top: 100px;
@@ -480,10 +492,7 @@ button{
 }
 
 
-
-
-
-/* Scroll animation */
+/* JS scroll animation */
 .hidden{
     opacity: 0;
     filter: blur(30px);
@@ -509,6 +518,11 @@ button{
         text-align: center;
     }
 
+    .about-main img{
+        margin-top: 30px;
+        width: 90%;
+    }
+
     .content-wrapper{
         flex-wrap: wrap;
         text-align: center;
@@ -527,6 +541,22 @@ button{
     }
     .img-gallery img{
         width: clamp(100px, 80vw, 400px);
+    }
+
+    .contact-main{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-main form{
+        width: 100vw;
+    }
+
+    .video-grid{
+        grid-template-columns: 1fr;
+    }
+    .animation-video{
+        width: clamp(250px,90vw,500px);
     }
 }
 
