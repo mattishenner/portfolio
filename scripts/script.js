@@ -55,9 +55,9 @@ const elts = {
 };
 
 const texts = [
-    "MOTION DESIGNER",
-    "UI DESIGNER",
-    "DEVELOPER"
+    "Motion designer",
+    "UI designer",
+    "Developer"
 ];
 
 const morphTime = 1;

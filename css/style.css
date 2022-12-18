@@ -6,7 +6,7 @@
     --margin: clamp(10px, 3vw, 30px);
     --flex-gap: clamp(30px, 5vw, 60px);
     --scroll-animation-size: 4vw;
-    --content-width: clamp(600px, 80vw, 1200px);
+    --content-margin: clamp(10px, 15vw, 280px);
 }
 
 
@@ -107,8 +107,6 @@ h3{
     color: black;
     font-weight: 300;
     font-size: 1.25rem;
-    /* border: solid 1px black; */
-    /* padding: .5rem 3rem; */
 }
 
 img{
@@ -319,6 +317,9 @@ button{
 .content-page main{
     margin: auto var(--margin);
 }
+.content-page section{
+    margin: auto var(--content-margin);
+}
 
 .content-wrapper{
     display: flex;
@@ -356,7 +357,7 @@ button{
     background-image: url('../img/banner-space.jpg');
 }
 #space-poster img{
-    width: 70%;
+    width: clamp(300px, 100%, 1600px);
 }
 #space-poster main p{
     margin-bottom: 3rem;
@@ -370,14 +371,12 @@ button{
 }
 
 .animation-video{
-    width: clamp(400px,30vw,500px);
+    width: 100%;
 }
 
 .video-grid{
-    margin: var(--margin);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
     gap: 50px;
 }
 
@@ -385,9 +384,7 @@ button{
 #ice-runner .content-header{
     background-image: url(../img/banner-ice-runner.jpg);
 }
-#ice-runner article{
-    margin: auto var(--margin);
-}
+
 
 .animation-wrapper{
     display: flex;
@@ -405,7 +402,7 @@ button{
     width: 100vw;
     height: 410px;
     background-image: url('../img/ice-runner-long.jpg');
-    transform: translateX(calc(0px - var(--margin)));
+    margin-bottom: 50px;
 }
 .img-gradient{
     width: 70%;
@@ -427,10 +424,11 @@ button{
     margin-top: 100px;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .img-gallery img{
-    width: clamp(150px, 25vw, 400px);
+    width: clamp(150px, 20vw, 400px);
 }
 
 
@@ -438,18 +436,15 @@ button{
 #redesign .content-header{
     background-image: url(../img/banner-vjbyg.jpg);
 }
-#redesign section{
-    margin: auto var(--margin);
-}
 
 #redesign .img-large{
     max-width: 70%;
     margin: 50px auto;
 }
 
-#redesign .img-medium{
+.img-medium{
     display: block;
-    max-width: 50%;
+    width: clamp(300px, 50%, 1000px);
     margin: 50px auto;
 }
 
@@ -475,10 +470,6 @@ button{
 /* Animation - Me */
 #animation-me .content-header{
     background-image: url(../img/banner-me.jpg);
-}
-
-#animation-me article{
-    margin: auto var(--margin);
 }
 
 #animation-me .animation-wrapper{
