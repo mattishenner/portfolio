@@ -139,6 +139,11 @@ nav{
     overflow: hidden;
 }
 
+.waves{
+    transform: scaleY(110%) translateY(100px);
+    filter: blur(60px);
+}
+
 /* FRONT PAGE ANIMATION */
 #container {
     display: flex;
