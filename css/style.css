@@ -75,28 +75,31 @@ nav{
     max-width: 100vw;
     font-size: 1.125rem;
     white-space: nowrap;
+    height: var(--menu-height);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .menu{
-    height: var(--menu-height);
     display: flex;
     justify-content: right;
-    align-items: center;
     margin: 0px;
     padding: 0;
     list-style: none;
+    text-align: center;
 }
 
-.menu-item:first-child{
-    margin-right: auto;
-    margin-left: 0px;
-}
-
-.menu a{
+.menu a, .logo{
     text-decoration: none;
     color: black;
     margin: auto var(--menu-item-space);
     transition: color 200ms;
+}
+
+.logo{
+    margin-left: var(--margin);
+    margin-right: auto;
 }
 
 .menu a:hover{
@@ -113,9 +116,30 @@ nav{
     display: block;
     position: relative;
     height: 0.2em;
-    width: 25%;
+    width: 20px;
     margin: auto;
     border-bottom: solid 2px;
+}
+
+.menu-icon{
+    position: absolute;
+    top: 25px;
+    right: var(--margin);
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+.menu-icon div{
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    margin: 8px 0;
+    transition: all 0.5s;
+}
+
+.menu-icon .line2{
+    width: 25px;
+    transform: translateX(10px);
 }
 
 
@@ -134,10 +158,6 @@ nav{
     top: 20px;
 }
 
-#frontpage{
-    max-height: 100vh;
-    overflow: hidden;
-}
 
 /* FRONT PAGE ANIMATION */
 #container {
@@ -147,7 +167,7 @@ nav{
     margin: auto;
     width: 100vw;
     height: clamp(80px, 13vw, 120px);
-    filter: url(#threshold) blur(0.5px);
+    filter: url(#threshold);
 }
 
 #text1, #text2 {
@@ -344,6 +364,18 @@ button{
 .header-text{
     margin: auto var(--margin);
     z-index: 1;
+}
+
+.work-arrows{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.work-arrows i{
+    margin: auto 30px;
+    color: black;
 }
 
 
@@ -545,6 +577,54 @@ button{
     .animation-video{
         width: clamp(250px,90vw,500px);
     }
+
+
+    /* nav */
+    .menu-icon{
+        display: block;
+    }
+
+    .menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background: #e3e3e3c7;
+        opacity: 0;
+        transition: all 0.2s;
+        display: none;
+    }
+
+    .menu li{
+        font-size: 1.5rem;
+        margin: 5vh;
+    }
+
+    .menu li:first-child{
+        padding-top: 40vh;
+    }
+
+    .mobile-menu{
+        opacity: 1;
+        background: #ffffff69;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        display: block;
+    }  
+
+    .cross-icon .line1{
+        transform: rotate(135deg) translate(5px, -5px);
+    }
+    .cross-icon .line2{
+        transform: translateX(70px);
+        opacity: 0;
+    }
+    .cross-icon .line3{
+        transform: rotate(45deg) translate(-10px, -10px);
+    }
+
 }
 
 @keyframes website-scroll {

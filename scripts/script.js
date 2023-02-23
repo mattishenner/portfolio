@@ -46,13 +46,10 @@ const hidden2Elements = document.querySelectorAll('.hidden2');
 hidden2Elements.forEach((el) => observer.observe(el));
 
 
-
-
 // Animated text on front page
-var check = document.getElementById("text1");
+function createMorphAnimation() {
 
-if(check){
-    var elts = {
+    const elts = {
         text1: document.getElementById("text1"),
         text2: document.getElementById("text2")
     };
@@ -133,4 +130,18 @@ if(check){
 
     animate();
 
+
 }
+
+var check = document.getElementById("text1");
+
+if(check) createMorphAnimation()
+
+// Responsive menu
+const menuBtn = document.querySelector('.menu-icon')
+const navLinks = document.querySelector('.menu')
+
+menuBtn.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    menuBtn.classList.toggle('cross-icon')
+})
